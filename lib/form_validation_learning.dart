@@ -11,6 +11,7 @@ class FormValidationLearning extends StatefulWidget {
 class _FormValidationLearningState extends State<FormValidationLearning> {
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
   void _submitForm(){
     if(_formKey.currentState!.validate()){
       ScaffoldMessenger.of(_formKey.currentContext!).showSnackBar(
