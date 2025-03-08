@@ -1,3 +1,4 @@
+import 'package:advanced_topics/form_validation_learning.dart';
 import 'package:flutter/material.dart';
 import 'home_screen.dart';
 
@@ -12,11 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const HomeScreen()
+      home: const FormValidationLearning()
     );
   }
 }
