@@ -18,6 +18,7 @@ class _FormValidationLearningState extends State<FormValidationLearning> {
           const SnackBar(content: Text('Form Submitted Successfully')));
     }
   }
+
   String? _validateEmail(value){
     if(value!.isEmpty){
       return 'Please Enter your email';
