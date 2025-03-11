@@ -21,9 +21,22 @@ class _EmployeeState extends State<Employee> {
         ),
       ),
       body: Container(
+        margin: EdgeInsets.only(left: 20,top: 30,right: 20),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-
+            Text('Name',style: TextStyle(color: Colors.black,fontSize: 24,fontWeight: FontWeight.bold)),
+            SizedBox(height: 10,),
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(),borderRadius: BorderRadius.circular(10)
+              ),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: InputBorder.none
+                ),
+              ),
+            )
           ],
         ),
       ),
