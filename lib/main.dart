@@ -1,6 +1,7 @@
-import 'package:advanced_topics/form_validation_learning.dart';
+import 'package:advanced_topics/firebase/home_page.dart';
+import 'package:advanced_topics/form_validation/form_validation_learning.dart';
 import 'package:flutter/material.dart';
-import 'home_screen.dart';
+import 'text_fields/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const FormValidationLearning()
+      home: HomePage()
     );
   }
 }
