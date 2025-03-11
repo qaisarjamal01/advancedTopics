@@ -8,7 +8,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   TextEditingController nameEditingController = TextEditingController();
   String value = '';
   @override
@@ -21,14 +20,16 @@ class _HomeScreenState extends State<HomeScreen> {
             child: TextField(
               controller: nameEditingController,
               //here collapsed means it has no default borders
-              decoration: InputDecoration.collapsed(hintText: 'Enter your name'),
-              onChanged: (String text){
+              decoration: InputDecoration.collapsed(
+                hintText: 'Enter your name',
+              ),
+              onChanged: (String text) {
                 //here showing every text when i typed
                 setState(() {
                   value = text;
                 });
               },
-              onSubmitted: (String text){
+              onSubmitted: (String text) {
                 //print when click on done or ok button or check button
                 setState(() {
                   value = text;
@@ -37,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
           ),
-          Text('\n\n $value')
+          Text('\n\n $value'),
         ],
       ),
     );

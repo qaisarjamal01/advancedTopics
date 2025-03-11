@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "300290709728",
+    "project_id": "advanced-topics-f7fa0",
+    "storage_bucket": "advanced-topics-f7fa0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300290709728:android:0ca04448fd213090d59885",
+        "android_client_info": {
+          "package_name": "com.example.advanced_topics"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKZY1J50XxqBJbS6XyZTyqRu88kCGzBDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
