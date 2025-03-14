@@ -65,8 +65,15 @@ class _EmployeeState extends State<Employee> {
                   decoration: InputDecoration(border: InputBorder.none),
                 ),
               ),
-              SizedBox(height: 10,),
-              Text('Age',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 24)),
+              SizedBox(height: 10),
+              Text(
+                'Age',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24,
+                ),
+              ),
               SizedBox(height: 10),
               Container(
                 decoration: BoxDecoration(
@@ -79,12 +86,19 @@ class _EmployeeState extends State<Employee> {
                 ),
               ),
               SizedBox(height: 10),
-              Text('Location',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: Colors.black)),
+              Text(
+                'Location',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
               SizedBox(height: 10),
               Container(
                 decoration: BoxDecoration(
                   border: Border.all(),
-                  borderRadius: BorderRadius.circular(10)
+                  borderRadius: BorderRadius.circular(10),
                 ),
                 child: TextField(
                   controller: locationController,
@@ -93,27 +107,35 @@ class _EmployeeState extends State<Employee> {
               ),
               SizedBox(height: 10),
               Center(
-                child: ElevatedButton(onPressed: () async{
-                  String id = randomAlphaNumeric(10);
-                  Map<String,dynamic> employeeInfoMap = {
-                    'Id': id,
-                    'Name': nameController.text,
-                    'Age': ageController.text,
-                    'Location': locationController.text
-                  };
-                  await DatabaseMethods().addEmployeeDetails(employeeInfoMap, id).then((value){
-                    Fluttertoast.showToast(
-                        msg: "Employee details added successfully",
-                        toastLength: Toast.LENGTH_SHORT,
-                        gravity: ToastGravity.CENTER,
-                        timeInSecForIosWeb: 1,
-                        backgroundColor: Colors.red,
-                        textColor: Colors.white,
-                        fontSize: 16.0
-                    );
-                  });
-                }, child: Text('Add',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)),
-              )
+                child: ElevatedButton(
+                  onPressed: () async {
+                    String id = randomAlphaNumeric(10);
+                    Map<String, dynamic> employeeInfoMap = {
+                      'Id': id,
+                      'Name': nameController.text,
+                      'Age': ageController.text,
+                      'Location': locationController.text,
+                    };
+                    await DatabaseMethods()
+                        .addEmployeeDetails(employeeInfoMap, id)
+                        .then((value) {
+                          Fluttertoast.showToast(
+                            msg: "Employee details added successfully",
+                            toastLength: Toast.LENGTH_SHORT,
+                            gravity: ToastGravity.CENTER,
+                            timeInSecForIosWeb: 1,
+                            backgroundColor: Colors.red,
+                            textColor: Colors.white,
+                            fontSize: 16.0,
+                          );
+                        });
+                  },
+                  child: Text(
+                    'Add',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

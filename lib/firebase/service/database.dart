@@ -2,9 +2,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 //firebase methods for CRUD
 
-//for adding the data in the firestore
 class DatabaseMethods {
-  Future addEmployeeDetails(Map<String, dynamic> employeeInfoMap, String id) async{
+  //for adding the data in the firestore
+  Future addEmployeeDetails(
+    Map<String, dynamic> employeeInfoMap,
+    String id,
+  ) async {
     return await FirebaseFirestore.instance
         .collection('Employees')
         .doc(id)
@@ -12,7 +15,7 @@ class DatabaseMethods {
   }
 
   //for fetching the data from the firestore
-  Stream<QuerySnapshot> getEmployeeDetails(){
+  Stream<QuerySnapshot> getEmployeeDetails() {
     return FirebaseFirestore.instance.collection('Employees').snapshots();
   }
 }
