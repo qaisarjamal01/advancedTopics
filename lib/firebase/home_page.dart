@@ -88,6 +88,7 @@ class _HomePageState extends State<HomePage> {
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
+                                        Spacer(),
                                         GestureDetector(
                                             onTap: (){
                                               nameController.text     = ds['Name'];
@@ -95,7 +96,13 @@ class _HomePageState extends State<HomePage> {
                                               locationController.text = ds['Location'];
                                               editEmployeeDetails(ds['Id']);
                                             },
-                                            child: Icon(Icons.edit,color: Colors.orange,))
+                                            child: Icon(Icons.edit,color: Colors.orange,)),
+                                        SizedBox(width: 5.0,),
+                                        GestureDetector(
+                                            onTap: () async{
+                                              await DatabaseMethods().deleteEmployeeDetails(ds['Id']);
+                                            },
+                                            child: Icon(Icons.delete,color: Colors.orange,))
                                       ],
                                     ),
                                     Text(
