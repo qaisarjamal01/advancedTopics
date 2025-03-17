@@ -132,7 +132,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future editEmployeeDetails(String id)=>showDialog(context: context, builder: (context) => AlertDialog(
-    content: Container(
+    content: SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -224,8 +224,19 @@ class _HomePageState extends State<HomePage> {
           ),
           SizedBox(height: 30,),
           Center(
-            child: ElevatedButton(onPressed: (){
+            child: ElevatedButton(onPressed: () async{
+              Map<String,dynamic> updateInfo = {
+                'Name'    : nameController.text,
+                'Age'     : ageController.text,
+                'Location': locationController.text,
+                'Id'      : id
+              };
+              await DatabaseMethods().updateEmployeeDetails(id, updateInfo);
 
+              //we use this instead of .then because it checks widget is still in widget tree then call
+              if(context.mounted){
+                Navigator.pop(context);
+              }
             }, child: Text('Update')),
           )
         ],
