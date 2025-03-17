@@ -20,7 +20,13 @@ class DatabaseMethods {
   }
 
   //for updating the data of firestore
-  Future updateEmployeeDetails(String id,Map<String,dynamic> updateInfo) async{
-    return await FirebaseFirestore.instance.collection('Employees').doc(id).update(updateInfo);
+  Future updateEmployeeDetails(
+    String id,
+    Map<String, dynamic> updateInfo,
+  ) async {
+    return await FirebaseFirestore.instance
+        .collection('Employees')
+        .doc(id)
+        .update(updateInfo);
   }
 }
