@@ -16,14 +16,27 @@ class _FirebaseAuthDetailsState extends State<FirebaseAuthDetails> {
         centerTitle: true,
         backgroundColor: Colors.blue,
       ),
-      body: Column(
-        children: [
-          TextFormField(
-            decoration: InputDecoration(
-              labelText: 'Enter your email',
+      body: SafeArea(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'Enter your email',
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(color: Colors.orange.shade300),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.blue),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ),
             ),
-          )
-        ],
+          ],
+        ),
       ),
     );
   }
