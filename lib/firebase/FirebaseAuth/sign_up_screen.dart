@@ -13,6 +13,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController nameController     = TextEditingController();
   TextEditingController emailController    = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    super.dispose();
+    nameController.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;

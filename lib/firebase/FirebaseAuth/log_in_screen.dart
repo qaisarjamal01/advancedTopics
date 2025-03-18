@@ -13,6 +13,13 @@ class LogInScreen extends StatefulWidget {
 class _LogInScreenState extends State<LogInScreen> {
   TextEditingController emailController    = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    super.dispose();
+    emailController.dispose();
+    passwordController.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
