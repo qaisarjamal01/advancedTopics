@@ -1,4 +1,4 @@
-import 'package:advanced_topics/firebase/FirebaseAuth/firebase_auth_details.dart';
+import 'package:advanced_topics/firebase/FirebaseAuth/sign_up_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: FirebaseAuthDetails(),
+      home: SignUpScreen(),
     );
   }
 }
