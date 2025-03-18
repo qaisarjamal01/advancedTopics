@@ -21,7 +21,6 @@ class _FirebaseAuthDetailsState extends State<FirebaseAuthDetails> {
           TextFormField(
             decoration: InputDecoration(
               labelText: 'Enter your email',
-
             ),
           )
         ],
