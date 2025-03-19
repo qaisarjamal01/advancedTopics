@@ -30,7 +30,11 @@ class DatabaseMethods {
         .update(updateInfo);
   }
 
-  Future deleteEmployeeDetails(String id) async{
-    return await FirebaseFirestore.instance.collection('Employees').doc(id).delete();
+  //for deleting the data of firestore
+  Future deleteEmployeeDetails(String id) async {
+    return await FirebaseFirestore.instance
+        .collection('Employees')
+        .doc(id)
+        .delete();
   }
 }

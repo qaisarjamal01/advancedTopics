@@ -8,8 +8,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  TextEditingController nameEditingController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
   String value = '';
+
+  @override
+  void dispose() {
+    super.dispose();
+    nameController.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Center(
             child: TextField(
-              controller: nameEditingController,
+              controller: nameController,
               //here collapsed means it has no default borders
               decoration: InputDecoration.collapsed(
                 hintText: 'Enter your name',
@@ -34,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 setState(() {
                   value = text;
                 });
-                nameEditingController.clear();
+                nameController.clear();
               },
             ),
           ),

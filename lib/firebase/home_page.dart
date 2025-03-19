@@ -14,6 +14,14 @@ class _HomePageState extends State<HomePage> {
   TextEditingController nameController     = TextEditingController();
   TextEditingController ageController      = TextEditingController();
   TextEditingController locationController = TextEditingController();
+
+  @override
+  void dispose() {
+    super.dispose();
+    nameController.dispose();
+    ageController.dispose();
+    locationController.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
