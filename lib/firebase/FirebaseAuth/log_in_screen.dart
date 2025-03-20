@@ -1,10 +1,8 @@
 import 'dart:developer';
-
 import 'package:advanced_topics/firebase/FirebaseAuth/firebase_auth_service.dart';
 import 'package:advanced_topics/firebase/FirebaseAuth/home.dart';
 import 'package:advanced_topics/firebase/FirebaseAuth/sign_up_screen.dart';
 import 'package:flutter/material.dart';
-
 import '../../components/custom_text_form_field.dart';
 
 class LogInScreen extends StatefulWidget {
