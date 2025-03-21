@@ -1,4 +1,3 @@
-import 'package:advanced_topics/firebase/FirebaseAuth/home.dart';
 import 'package:advanced_topics/firebase/FirebaseAuth/sign_up_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
