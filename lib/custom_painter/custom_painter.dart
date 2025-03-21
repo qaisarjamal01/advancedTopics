@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CustomPainter extends StatefulWidget {
-  const CustomPainter({super.key});
+class CustomPainters extends StatefulWidget {
+  const CustomPainters({super.key});
 
   @override
-  State<CustomPainter> createState() => _CustomPainterState();
+  State<CustomPainters> createState() => _CustomPaintersState();
 }
 
-class _CustomPainterState extends State<CustomPainter> {
+class _CustomPaintersState extends State<CustomPainters> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
