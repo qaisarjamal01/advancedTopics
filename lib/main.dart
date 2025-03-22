@@ -1,4 +1,4 @@
-import 'package:advanced_topics/custom_painter/custom_painter.dart';
+import 'package:advanced_topics/animations/lottie_animations.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: CustomPainters(),
+      home: LottieAnimations(),
     );
   }
 }
